@@ -15,12 +15,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+
     <dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>servlet-api</artifactId>
@@ -33,18 +28,6 @@
 	    <scope>compile</scope>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/tomcat/naming-factory -->
-	<dependency>
-	    <groupId>tomcat</groupId>
-	    <artifactId>naming-factory</artifactId>
-	    <version>4.0.6</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/tomcat/naming-resources -->
-	<dependency>
-	    <groupId>tomcat</groupId>
-	    <artifactId>naming-resources</artifactId>
-	    <version>4.1.31</version>
-	</dependency>
-	
+
   </dependencies>
 </project>
