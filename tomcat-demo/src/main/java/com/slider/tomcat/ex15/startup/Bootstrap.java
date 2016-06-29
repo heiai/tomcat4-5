@@ -32,6 +32,7 @@ public final class Bootstrap {
     context.setPath("/app1");
     context.setDocBase("app1");
     LifecycleListener listener = new ContextConfig();
+    ((ContextConfig)listener).setDebug(1);
     ((Lifecycle) context).addLifecycleListener(listener);
 
     Host host = new StandardHost();
