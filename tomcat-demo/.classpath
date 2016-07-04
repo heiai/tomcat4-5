@@ -37,6 +37,7 @@
 	<classpathentry kind="lib" path="lib/xercesImpl.jar"/>
 	<classpathentry kind="lib" path="lib/xmlParserAPIs.jar"/>
 	<classpathentry kind="lib" path="lib/bootstrap.jar"/>
+	<classpathentry kind="lib" path="lib/catalina.jar" sourcepath="E:/迅雷下载/jakarta-tomcat-4.1.12-src.zip"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

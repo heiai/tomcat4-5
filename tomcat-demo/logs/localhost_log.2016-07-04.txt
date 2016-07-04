@@ -1,0 +1,1123 @@
+2016-07-04 09:24:15 HostConfig[localhost]: Deploying configuration descriptor manager.xml
+2016-07-04 09:24:15 StandardHost[localhost]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-04 09:24:15 HostConfig[localhost] Error deploying configuration descriptor manager.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-04 09:24:15 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:24:15 StandardContext[/myadmin]: Starting
+2016-07-04 09:24:15 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:24:15 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:24:15 StandardHost[localhost]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\myadmin does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-04 09:24:15 HostConfig[localhost] Error deploying configuration descriptor myadmin.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-04 09:24:15 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:24:15 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:24:15 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:24:15 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:24:15 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:24:15 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:24:15 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:28:26 HostConfig[localhost]: Deploying configuration descriptor manager.xml
+2016-07-04 09:28:26 WebappLoader[/manager]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\manager
+2016-07-04 09:28:26 ContextConfig[/manager]: Missing default web.xml, using application web.xml only
+2016-07-04 09:28:26 ContextConfig[/manager]: Configured an authenticator for method BASIC
+2016-07-04 09:28:26 StandardManager[/manager]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:28:26 StandardManager[/manager]: Seeding of random number generator has been completed
+2016-07-04 09:28:26 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:28:26 StandardContext[/myadmin]: Starting
+2016-07-04 09:28:26 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:28:26 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:28:26 StandardHost[localhost]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\myadmin does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-04 09:28:26 HostConfig[localhost] Error deploying configuration descriptor myadmin.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-04 09:28:26 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:28:26 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:28:26 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:28:26 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:28:26 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:28:26 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:28:26 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:29:16 HostConfig[localhost]: Deploying configuration descriptor manager.xml
+2016-07-04 09:29:16 WebappLoader[/manager]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\manager
+2016-07-04 09:29:16 ContextConfig[/manager]: Missing default web.xml, using application web.xml only
+2016-07-04 09:29:16 ContextConfig[/manager]: Configured an authenticator for method BASIC
+2016-07-04 09:29:16 StandardManager[/manager]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:29:16 StandardManager[/manager]: Seeding of random number generator has been completed
+2016-07-04 09:29:16 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:29:16 StandardContext[/myadmin]: Starting
+2016-07-04 09:29:16 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:29:16 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:29:16 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 09:29:16 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 09:29:16 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 09:29:16 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 09:29:16 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 09:29:16 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 09:29:16 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 09:29:16 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 09:29:16 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 09:29:16 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 09:29:16 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 09:29:16 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:29:16 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 09:29:17 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:29:17 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 09:29:17 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 09:29:17 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 09:29:17 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 09:29:17 ContextConfig[/myadmin]: ======================
+2016-07-04 09:29:17 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 09:29:17 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 09:29:17 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:29:17 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 09:29:17 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 09:29:17 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 09:29:17 StandardContext[/myadmin]: Sending application start events
+2016-07-04 09:29:17 StandardContext[/myadmin]: Starting filters
+2016-07-04 09:29:17 StandardContext[/myadmin]: Starting completed
+2016-07-04 09:29:17 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:29:17 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:29:17 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:29:17 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:29:17 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:29:17 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:29:17 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:29:32 StandardHost[localhost]: MAPPING configuration error for request URI /
+2016-07-04 09:29:32 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:29:47 StandardHost[localhost]: MAPPING configuration error for request URI /manage
+2016-07-04 09:29:48 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:30:46 StandardWrapper[/manager:Manager]: Loading container servlet Manager
+2016-07-04 09:30:46 StandardWrapper[/manager:Manager]: Marking servlet Manager as unavailable
+2016-07-04 09:30:46 StandardWrapperValve[Manager]: Allocate exception for servlet Manager
+javax.servlet.ServletException: Wrapper cannot find servlet class org.apache.catalina.servlets.ManagerServlet or a class it depends on
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:880)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:658)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:214)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:527)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardContext.invoke(StandardContext.java:2396)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:180)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.valves.ErrorDispatcherValve.invoke(ErrorDispatcherValve.java:170)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:172)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:174)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.connector.http.HttpProcessor.process(HttpProcessor.java:1040)
+	at org.apache.catalina.connector.http.HttpProcessor.run(HttpProcessor.java:1151)
+	at java.lang.Thread.run(Thread.java:745)
+----- Root Cause -----
+java.lang.ClassNotFoundException: org.apache.catalina.servlets.ManagerServlet
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:874)
+	at org.apache.catalina.core.StandardWrapper.allocate(StandardWrapper.java:658)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:214)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:527)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardContext.invoke(StandardContext.java:2396)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:180)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.valves.ErrorDispatcherValve.invoke(ErrorDispatcherValve.java:170)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:172)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:641)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:174)
+	at org.apache.catalina.core.StandardPipeline$StandardPipelineValveContext.invokeNext(StandardPipeline.java:643)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:480)
+	at org.apache.catalina.core.ContainerBase.invoke(ContainerBase.java:995)
+	at org.apache.catalina.connector.http.HttpProcessor.process(HttpProcessor.java:1040)
+	at org.apache.catalina.connector.http.HttpProcessor.run(HttpProcessor.java:1151)
+	at java.lang.Thread.run(Thread.java:745)
+
+2016-07-04 09:30:46 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:34:02 WebappLoader[/manager]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\manager
+2016-07-04 09:34:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/catalina-manager.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\catalina-manager.jar
+2016-07-04 09:34:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-fileupload-1.2.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-fileupload-1.2.jar
+2016-07-04 09:34:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-io-1.4.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-io-1.4.jar
+2016-07-04 09:34:02 ContextConfig[/manager]: Missing default web.xml, using application web.xml only
+2016-07-04 09:34:02 StandardManager[/manager]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:34:02 StandardManager[/manager]: Seeding of random number generator has been completed
+2016-07-04 09:36:02 WebappLoader[/manager]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\manager
+2016-07-04 09:36:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/catalina-manager.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\catalina-manager.jar
+2016-07-04 09:36:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-fileupload-1.2.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-fileupload-1.2.jar
+2016-07-04 09:36:02 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-io-1.4.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-io-1.4.jar
+2016-07-04 09:36:02 ContextConfig[/manager]: Missing default web.xml, using application web.xml only
+2016-07-04 09:36:02 StandardManager[/manager]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:36:02 StandardManager[/manager]: Seeding of random number generator has been completed
+2016-07-04 09:36:09 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:36:13 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:36:19 StandardHost[localhost]: MAPPING configuration error for request URI /manag
+2016-07-04 09:36:19 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:43:07 HostConfig[localhost]: Deploying configuration descriptor manager.xml
+2016-07-04 09:43:07 WebappLoader[/manager]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\manager
+2016-07-04 09:43:07 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/catalina-manager.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\catalina-manager.jar
+2016-07-04 09:43:07 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-fileupload-1.2.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-fileupload-1.2.jar
+2016-07-04 09:43:07 WebappLoader[/manager]: Deploy JAR /WEB-INF/lib/commons-io-1.4.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager\WEB-INF\lib\commons-io-1.4.jar
+2016-07-04 09:43:07 ContextConfig[/manager]: Missing default web.xml, using application web.xml only
+2016-07-04 09:43:07 ContextConfig[/manager]: Configured an authenticator for method BASIC
+2016-07-04 09:43:07 StandardManager[/manager]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:43:07 StandardManager[/manager]: Seeding of random number generator has been completed
+2016-07-04 09:43:07 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:43:07 StandardContext[/myadmin]: Starting
+2016-07-04 09:43:07 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:43:07 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:43:07 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 09:43:07 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 09:43:07 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 09:43:07 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 09:43:07 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 09:43:07 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 09:43:07 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 09:43:07 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 09:43:07 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 09:43:07 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 09:43:07 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 09:43:07 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:43:07 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 09:43:07 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 09:43:07 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 09:43:07 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 09:43:07 ContextConfig[/myadmin]: ======================
+2016-07-04 09:43:07 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 09:43:07 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 09:43:07 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:43:07 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 09:43:07 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 09:43:07 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 09:43:07 StandardContext[/myadmin]: Sending application start events
+2016-07-04 09:43:07 StandardContext[/myadmin]: Starting filters
+2016-07-04 09:43:08 StandardContext[/myadmin]: Starting completed
+2016-07-04 09:43:08 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:43:08 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:43:08 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:43:08 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:43:08 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:43:08 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:43:08 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:44:49 HostConfig[localhost]: Deploying configuration descriptor manager.xml
+2016-07-04 09:44:49 StandardHost[localhost]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-04 09:44:49 HostConfig[localhost] Error deploying configuration descriptor manager.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-04 09:44:49 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:44:49 StandardContext[/myadmin]: Starting
+2016-07-04 09:44:49 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:44:49 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:44:49 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 09:44:49 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 09:44:49 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 09:44:49 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 09:44:49 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 09:44:49 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 09:44:49 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 09:44:49 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 09:44:49 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 09:44:49 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 09:44:49 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 09:44:49 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:44:49 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 09:44:49 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 09:44:49 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 09:44:49 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 09:44:49 ContextConfig[/myadmin]: ======================
+2016-07-04 09:44:49 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 09:44:49 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 09:44:49 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:44:49 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 09:44:49 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 09:44:49 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 09:44:49 StandardContext[/myadmin]: Sending application start events
+2016-07-04 09:44:49 StandardContext[/myadmin]: Starting filters
+2016-07-04 09:44:49 StandardContext[/myadmin]: Starting completed
+2016-07-04 09:44:49 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:44:49 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:44:49 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:44:49 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:44:49 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:44:49 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:44:49 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:45:29 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:45:29 StandardContext[/myadmin]: Starting
+2016-07-04 09:45:29 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:45:29 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:45:29 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 09:45:29 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 09:45:29 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 09:45:29 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 09:45:29 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 09:45:29 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 09:45:29 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 09:45:29 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 09:45:29 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 09:45:29 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 09:45:29 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 09:45:29 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:45:29 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 09:45:29 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 09:45:29 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 09:45:29 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 09:45:29 ContextConfig[/myadmin]: ======================
+2016-07-04 09:45:29 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 09:45:29 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 09:45:29 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:45:29 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 09:45:29 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 09:45:29 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 09:45:29 StandardContext[/myadmin]: Sending application start events
+2016-07-04 09:45:29 StandardContext[/myadmin]: Starting filters
+2016-07-04 09:45:30 StandardContext[/myadmin]: Starting completed
+2016-07-04 09:45:30 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:45:30 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:45:30 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:45:30 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:45:30 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:45:30 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:45:30 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:56:33 StandardHost[localhost]: MAPPING configuration error for request URI /admain
+2016-07-04 09:56:33 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:56:33 StandardHost[localhost]: MAPPING configuration error for request URI /favicon.ico
+2016-07-04 09:56:59 Authenticator[/myadmin]: Security checking request GET /myadmin
+2016-07-04 09:56:59 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET  --> false
+2016-07-04 09:56:59 Authenticator[/myadmin]:   No applicable constraint located
+2016-07-04 09:56:59 Authenticator[/myadmin]:  Not subject to any constraint
+2016-07-04 09:56:59 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin' and relativeURI=''
+2016-07-04 09:56:59 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:56:59 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:56:59 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:56:59 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:57:04 Authenticator[/myadmin]: Security checking request GET /myadmin
+2016-07-04 09:57:04 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET  --> false
+2016-07-04 09:57:04 Authenticator[/myadmin]:   No applicable constraint located
+2016-07-04 09:57:04 Authenticator[/myadmin]:  Not subject to any constraint
+2016-07-04 09:57:04 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin' and relativeURI=''
+2016-07-04 09:57:04 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:57:04 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:57:04 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:57:04 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:57:34 Authenticator[/myadmin]: Security checking request GET /myadmin/index.jsp
+2016-07-04 09:57:34 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /index.jsp --> true
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:57:34 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:57:34 Authenticator[/myadmin]: Save request in session '57B652F14ACFB67AAC64E9CDA8D13BB8'
+2016-07-04 09:57:34 Authenticator[/myadmin]: Redirect to login page '/myadmin/login.jsp'
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Failed authenticate() test
+2016-07-04 09:57:34 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:57:34 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:57:34 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:57:34 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:57:34 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:57:34 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:57:34 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:57:34 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:57:34 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:57:34 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:57:58 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 09:57:58 StandardContext[/myadmin]: Starting
+2016-07-04 09:57:58 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 09:57:58 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 09:57:58 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 09:57:58 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 09:57:58 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 09:57:58 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 09:57:58 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 09:57:58 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 09:57:58 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 09:57:58 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 09:57:58 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 09:57:58 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 09:57:58 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 09:57:58 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 09:57:58 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 09:57:58 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 09:57:58 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 09:57:58 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 09:57:58 ContextConfig[/myadmin]: ======================
+2016-07-04 09:57:58 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 09:57:58 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 09:57:58 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:57:58 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 09:57:58 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 09:57:58 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 09:57:58 StandardContext[/myadmin]: Sending application start events
+2016-07-04 09:57:58 StandardContext[/myadmin]: Starting filters
+2016-07-04 09:57:58 StandardContext[/myadmin]: Starting completed
+2016-07-04 09:57:58 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 09:57:58 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 09:57:58 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 09:57:58 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 09:57:58 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 09:57:58 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 09:57:58 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-04 09:58:03 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:03 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:03 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:03 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:03 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:03 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:03 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:03 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:03 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:03 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:04 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:04 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:04 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:04 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:04 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:04 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:04 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:04 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:04 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:04 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:05 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:05 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:05 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:05 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:05 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:05 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:05 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:05 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:05 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:05 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:06 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:06 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:06 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:06 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:06 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:06 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:06 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:06 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:06 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:06 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:07 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:07 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:07 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:07 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:07 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:07 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:07 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:07 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:07 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:07 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:08 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:08 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:08 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:08 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:08 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:08 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:08 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:08 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:08 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:08 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:09 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:09 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:09 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:09 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:09 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:09 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:09 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:09 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:09 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:09 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:12 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:12 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:12 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:12 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:12 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:12 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:12 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:12 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:12 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:12 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:14 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:14 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:14 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:14 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:14 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:14 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:14 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:14 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:14 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:14 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:15 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:15 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:15 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:15 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:15 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:15 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:15 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:15 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:15 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:15 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:15 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:15 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:16 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:16 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:16 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:16 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:16 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:16 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:16 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:16 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:16 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:16 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:17 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:17 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:17 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:17 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:17 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:17 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:17 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:17 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:17 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:17 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:20 StandardHost[localhost]: MAPPING configuration error for request URI /myadhmin/login.jsp
+2016-07-04 09:58:26 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:26 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:26 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:26 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:26 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:26 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:26 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:26 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:26 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:26 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:27 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:27 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:27 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:27 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:27 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:27 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:27 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:27 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:27 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:27 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:31 Authenticator[/myadmin]: Security checking request GET /myadmin/
+2016-07-04 09:58:31 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET / --> false
+2016-07-04 09:58:31 Authenticator[/myadmin]:   No applicable constraint located
+2016-07-04 09:58:31 Authenticator[/myadmin]:  Not subject to any constraint
+2016-07-04 09:58:31 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/' and relativeURI='/'
+2016-07-04 09:58:31 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:31 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:31 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:31 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:34 Authenticator[/myadmin]: Security checking request GET /myadmin/
+2016-07-04 09:58:34 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET / --> false
+2016-07-04 09:58:34 Authenticator[/myadmin]:   No applicable constraint located
+2016-07-04 09:58:34 Authenticator[/myadmin]:  Not subject to any constraint
+2016-07-04 09:58:34 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/' and relativeURI='/'
+2016-07-04 09:58:34 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:34 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:34 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:34 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:39 Authenticator[/myadmin]: Security checking request GET /myadmin/index.jsp
+2016-07-04 09:58:39 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /index.jsp --> true
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:39 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:39 Authenticator[/myadmin]: Save request in session '5D7635A3255AC05777D4D60936670F21'
+2016-07-04 09:58:39 Authenticator[/myadmin]: Redirect to login page '/myadmin/login.jsp'
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Failed authenticate() test
+2016-07-04 09:58:39 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:39 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:39 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:39 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:39 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:39 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:39 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:39 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:39 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:39 StandardContext[/myadmin]:   Trying default match
+2016-07-04 09:58:54 Authenticator[/myadmin]: Security checking request GET /myadmin/index.jsp
+2016-07-04 09:58:54 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /index.jsp --> true
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:54 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:54 Authenticator[/myadmin]: Save request in session '5D7635A3255AC05777D4D60936670F21'
+2016-07-04 09:58:54 Authenticator[/myadmin]: Redirect to login page '/myadmin/login.jsp'
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Failed authenticate() test
+2016-07-04 09:58:54 Authenticator[/myadmin]: Security checking request GET /myadmin/login.jsp
+2016-07-04 09:58:54 Authenticator[/myadmin]:   Checking constraint 'SecurityConstraint[Protected Area]' against GET /login.jsp --> true
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Subject to constraint SecurityConstraint[Protected Area]
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Calling checkUserData()
+2016-07-04 09:58:54 Authenticator[/myadmin]:   User data constraint has no restrictions
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Calling authenticate()
+2016-07-04 09:58:54 Authenticator[/myadmin]: Requesting login page normally
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Calling accessControl()
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Allow access to login page /myadmin/login.jsp
+2016-07-04 09:58:54 Authenticator[/myadmin]:  Successfully passed all security constraints
+2016-07-04 09:58:54 StandardContext[/myadmin]: Mapping contextPath='/myadmin' with requestURI='/myadmin/login.jsp' and relativeURI='/login.jsp'
+2016-07-04 09:58:54 StandardContext[/myadmin]:   Trying exact match
+2016-07-04 09:58:54 StandardContext[/myadmin]:   Trying prefix match
+2016-07-04 09:58:54 StandardContext[/myadmin]:   Trying extension match
+2016-07-04 09:58:54 StandardContext[/myadmin]:   Trying default match
+2016-07-04 10:01:42 init
+
+2016-07-04 10:02:23 HostConfig[localhost]: Deploying configuration descriptor myadmin.xml
+2016-07-04 10:04:28 StandardContext[/myadmin]: Starting
+2016-07-04 10:04:28 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-04 10:04:28 StandardContext[/myadmin]: Configuring default Resources
+2016-07-04 10:04:28 StandardContext[/myadmin]: Configuring privileged default Loader
+2016-07-04 10:04:28 StandardContext[/myadmin]: Configuring default Manager
+2016-07-04 10:04:28 StandardContext[/myadmin]: Processing standard container startup
+2016-07-04 10:04:28 WebappLoader[/myadmin]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\myadmin
+2016-07-04 10:04:28 WebappLoader[/myadmin]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\classes
+2016-07-04 10:04:28 WebappLoader[/myadmin]: Deploy JAR /WEB-INF/lib/struts.jar to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\admin\WEB-INF\lib\struts.jar
+2016-07-04 10:04:28 WebappLoader[/myadmin]: Reloading checks are enabled for this Context
+2016-07-04 10:04:28 ContextConfig[/myadmin]: ContextConfig: Processing START
+2016-07-04 10:04:28 ContextConfig[/myadmin]: Missing default web.xml, using application web.xml only
+2016-07-04 10:04:28 StandardContext[/myadmin]: Setting deployment descriptor public ID to '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Accumulating TLD resource paths
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Scanning <taglib> elements in web.xml
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld' for URI '/WEB-INF/struts-html.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld' for URI '/WEB-INF/struts-bean.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld' for URI '/WEB-INF/struts-logic.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Scanning TLDs in /WEB-INF subdirectory
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/controls.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-bean.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-html.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/struts-logic.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Scanning JARs in /WEB-INF/lib subdirectory
+2016-07-04 10:04:28 ContextConfig[/myadmin]:    Adding path '/WEB-INF/lib/struts.jar'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-html.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Scanning JAR at resource path '/WEB-INF/lib/struts.jar'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-html.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-template.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-bean.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-logic.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/tlds/struts-form.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   Processing TLD at 'META-INF/taglib.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-bean.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/controls.tld'
+2016-07-04 10:04:28 ContextConfig[/myadmin]:  Scanning TLD at resource path '/WEB-INF/struts-logic.tld'
+2016-07-04 10:04:28 Authenticator[/myadmin]: No SingleSignOn Valve is present
+2016-07-04 10:04:28 ContextConfig[/myadmin]: Configured an authenticator for method FORM
+2016-07-04 10:04:28 ContextConfig[/myadmin]: Pipline Configuration:
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   org.apache.catalina.authenticator.FormAuthenticator/1.0
+2016-07-04 10:04:28 ContextConfig[/myadmin]:   org.apache.catalina.core.StandardContextValve/1.0
+2016-07-04 10:04:28 ContextConfig[/myadmin]: ======================
+2016-07-04 10:04:28 NamingContextListener[/Standalone/localhost/myadmin]: Creating JNDI naming context
+2016-07-04 10:04:28 NamingContextListener[/Standalone/localhost/myadmin]:   Resource parameters for UserTransaction = null
+2016-07-04 10:04:28 StandardManager[/myadmin]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 10:04:28 StandardManager[/myadmin]: Seeding of random number generator has been completed
+2016-07-04 10:04:28 StandardContext[/myadmin]: Posting standard context attributes
+2016-07-04 10:04:28 StandardContext[/myadmin]: Configuring application event listeners
+2016-07-04 10:04:28 StandardContext[/myadmin]: Sending application start events
+2016-07-04 10:04:28 StandardContext[/myadmin]: Starting filters
+2016-07-04 10:04:29 StandardContext[/myadmin]: Starting completed
+2016-07-04 10:04:29 HostConfig[localhost]: Deploying web application directory app1
+2016-07-04 10:04:29 StandardHost[localhost]: Installing web application at context path /app1 from URL file:C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-04 10:04:32 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\Administrator\git\tomcat4-5\tomcat-demo\work\Standalone\localhost\app1
+2016-07-04 10:04:32 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\Administrator\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-04 10:04:32 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-04 10:04:32 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-04 10:04:32 StandardManager[/app1]: Seeding of random number generator has been completed
