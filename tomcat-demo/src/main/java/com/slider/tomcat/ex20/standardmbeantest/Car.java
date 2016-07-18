@@ -11,6 +11,6 @@ public class Car implements CarMBean {
   }
   
   public void drive() {
-    System.out.println("Baby you can drive my car.");
+    System.out.println("Baby you can drive my car."+color);
   }
 }

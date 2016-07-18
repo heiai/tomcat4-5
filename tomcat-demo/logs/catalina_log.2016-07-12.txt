@@ -1,0 +1,323 @@
+2016-07-12 14:22:15 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:22:15 HostConfig[slider.com]: Deploying configuration descriptor manager.xml
+2016-07-12 14:22:15 StandardHost[slider.com]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\manager does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-12 14:22:15 HostConfig[slider.com] Error deploying configuration descriptor manager.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 17; columnNumber: 11; Error at (17, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:22:15 HostConfig[slider.com]: Deploying configuration descriptor myadmin.xml
+2016-07-12 14:22:15 StandardContext[/myadmin]: Starting
+2016-07-12 14:22:15 StandardContext[/myadmin]: Processing start(), current available=false
+2016-07-12 14:22:15 StandardContext[/myadmin]: Configuring default Resources
+2016-07-12 14:22:15 StandardHost[slider.com]: Error deploying application at context path null
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2312)
+	at org.apache.commons.digester.Digester.createSAXException(Digester.java:2332)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1039)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:579)
+	at org.apache.xerces.impl.XMLNamespaceBinder.endElement(XMLNamespaceBinder.java:646)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1972)
+	at org.apache.xerces.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:878)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.handleEndElement(XMLDocumentFragmentScannerImpl.java:1144)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:987)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(XMLDocumentFragmentScannerImpl.java:1445)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:333)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:524)
+	at org.apache.xerces.parsers.DTDConfiguration.parse(DTDConfiguration.java:580)
+	at org.apache.xerces.parsers.XMLParser.parse(XMLParser.java:152)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1169)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.beanutils.MethodUtils.invokeMethod(MethodUtils.java:228)
+	at org.apache.commons.digester.SetNextRule.end(SetNextRule.java:260)
+	at org.apache.commons.digester.Digester.endElement(Digester.java:1036)
+	... 30 more
+Caused by: java.lang.IllegalArgumentException: Document base C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\..\server\webapps\myadmin does not exist or is not a readable directory
+	at org.apache.naming.resources.FileDirContext.setDocBase(FileDirContext.java:193)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3397)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:821)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:807)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:579)
+	at org.apache.catalina.core.StandardHostDeployer.addChild(StandardHostDeployer.java:529)
+	... 37 more
+
+2016-07-12 14:22:15 HostConfig[slider.com] Error deploying configuration descriptor myadmin.xml
+java.io.IOException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 11; Error at (2, 11: null
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:22:15 HostConfig[slider.com]: Deploying web application directory app1
+2016-07-12 14:22:15 StandardHost[slider.com]: Installing web application at context path /app1 from URL file:C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-12 14:22:15 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\work\Standalone\slider.com\app1
+2016-07-12 14:22:15 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-12 14:22:15 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-12 14:22:15 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-12 14:22:15 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-12 14:22:15 HttpConnector[8080] Starting background thread
+2016-07-12 14:22:15 HttpProcessor[8080][0] Starting background thread
+2016-07-12 14:22:15 HttpProcessor[8080][1] Starting background thread
+2016-07-12 14:22:15 HttpProcessor[8080][2] Starting background thread
+2016-07-12 14:22:15 HttpProcessor[8080][3] Starting background thread
+2016-07-12 14:22:15 HttpProcessor[8080][4] Starting background thread
+2016-07-12 14:29:58 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:29:58 HttpConnector httpConnector, io problem: 
+java.net.BindException: Address already in use: JVM_Bind:8080
+	at org.apache.catalina.connector.http.HttpConnector.open(HttpConnector.java:980)
+	at org.apache.catalina.connector.http.HttpConnector.initialize(HttpConnector.java:1187)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:579)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:2245)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:509)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:30:14 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:30:14 HostConfig[slider.com]: Deploying configuration descriptor manager.xml
+2016-07-12 14:30:14 StandardHost[slider.com]: Error deploying application at context path null
+org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1183)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:30:14 HostConfig[slider.com] Error deploying configuration descriptor manager.xml
+java.io.IOException: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:30:14 HostConfig[slider.com]: Deploying configuration descriptor myadmin.xml
+2016-07-12 14:30:14 StandardHost[slider.com]: Error deploying application at context path null
+org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1183)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1514)
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:335)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:30:14 HostConfig[slider.com] Error deploying configuration descriptor myadmin.xml
+java.io.IOException: org.xml.sax.SAXParseException; Premature end of file.
+	at org.apache.catalina.core.StandardHostDeployer.install(StandardHostDeployer.java:341)
+	at org.apache.catalina.core.StandardHost.install(StandardHost.java:803)
+	at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:452)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:409)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:879)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:368)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:166)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1196)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:738)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1188)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:347)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:497)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:2189)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:510)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-07-12 14:30:14 HostConfig[slider.com]: Deploying web application directory app1
+2016-07-12 14:30:14 StandardHost[slider.com]: Installing web application at context path /app1 from URL file:C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-12 14:30:14 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\work\Standalone\slider.com\app1
+2016-07-12 14:30:14 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-12 14:30:14 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-12 14:30:14 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-12 14:30:14 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-12 14:30:14 HttpConnector[8080] Starting background thread
+2016-07-12 14:30:14 HttpProcessor[8080][0] Starting background thread
+2016-07-12 14:30:14 HttpProcessor[8080][1] Starting background thread
+2016-07-12 14:30:14 HttpProcessor[8080][2] Starting background thread
+2016-07-12 14:30:14 HttpProcessor[8080][3] Starting background thread
+2016-07-12 14:30:14 HttpProcessor[8080][4] Starting background thread
+2016-07-12 14:31:46 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:31:47 HostConfig[slider.com]: Deploying web application directory app1
+2016-07-12 14:31:47 StandardHost[slider.com]: Installing web application at context path /app1 from URL file:C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-12 14:31:47 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\work\Standalone\slider.com\app1
+2016-07-12 14:31:47 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-12 14:31:47 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-12 14:31:47 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-12 14:31:47 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-12 14:31:47 HttpConnector[8080] Starting background thread
+2016-07-12 14:31:47 HttpProcessor[8080][0] Starting background thread
+2016-07-12 14:31:47 HttpProcessor[8080][1] Starting background thread
+2016-07-12 14:31:47 HttpProcessor[8080][2] Starting background thread
+2016-07-12 14:31:47 HttpProcessor[8080][3] Starting background thread
+2016-07-12 14:31:47 HttpProcessor[8080][4] Starting background thread
+2016-07-12 14:31:58 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:31:58 HostConfig[slider.com]: Deploying web application directory app1
+2016-07-12 14:31:58 StandardHost[slider.com]: Installing web application at context path /app1 from URL file:C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-12 14:31:58 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\work\Standalone\slider.com\app1
+2016-07-12 14:31:58 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-12 14:31:58 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-12 14:31:58 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-12 14:31:58 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-12 14:31:58 HttpConnector[8080] Starting background thread
+2016-07-12 14:31:58 HttpProcessor[8080][0] Starting background thread
+2016-07-12 14:31:58 HttpProcessor[8080][1] Starting background thread
+2016-07-12 14:31:58 HttpProcessor[8080][2] Starting background thread
+2016-07-12 14:31:58 HttpProcessor[8080][3] Starting background thread
+2016-07-12 14:31:58 HttpProcessor[8080][4] Starting background thread
+2016-07-12 14:52:59 init
+
+2016-07-12 14:57:30 HttpConnector Opening server socket on all host IP addresses
+2016-07-12 14:57:36 HostConfig[slider.com]: Deploying web application directory app1
+2016-07-12 14:57:36 StandardHost[slider.com]: Installing web application at context path /app1 from URL file:C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1
+2016-07-12 14:57:37 WebappLoader[/app1]: Deploying class repositories to work directory C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\work\Standalone\slider.com\app1
+2016-07-12 14:57:37 WebappLoader[/app1]: Deploy class files /WEB-INF/classes to C:\Users\huangchao1\git\tomcat4-5\tomcat-demo\webapps\app1\WEB-INF\classes
+2016-07-12 14:57:38 ContextConfig[/app1]: Missing default web.xml, using application web.xml only
+2016-07-12 14:57:40 StandardManager[/app1]: Seeding random number generator class java.security.SecureRandom
+2016-07-12 14:57:40 StandardManager[/app1]: Seeding of random number generator has been completed
+2016-07-12 14:57:46 HttpConnector[8080] Starting background thread
+2016-07-12 14:57:46 HttpProcessor[8080][0] Starting background thread
+2016-07-12 14:57:46 HttpProcessor[8080][1] Starting background thread
+2016-07-12 14:57:46 HttpProcessor[8080][2] Starting background thread
+2016-07-12 14:57:46 HttpProcessor[8080][3] Starting background thread
+2016-07-12 14:57:46 HttpProcessor[8080][4] Starting background thread
+2016-07-12 14:58:46 init
+

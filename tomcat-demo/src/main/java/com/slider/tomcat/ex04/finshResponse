@@ -1,0 +1,20 @@
+1.servlet中手动关闭输出流 PrintWriter out = response.getWriter();out.close();
+ 系统会调用HttpResponseBase.doFlushBuffer()
+ 1.先调用HttpResponseBase。sendHeaders()方法将请求头写到流中
+ 2.让后调用父类的ResponseBase。flushBuffer()方法，将响应写到socket输出流中
+  output.write(buffer, 0, bufferCount);
+  
+  
+  
+  
+2。servlet执行完毕后，系统调用HttpResponseBase。finishResponse()方法
+	先调用HttpResponseBase。sendHeaders()方法将请求头写到流中
+	然后调用ResponseBase.finishResponse()方法，如同在servlet中手动关闭输出流
+	
+	
+	
+	
+	
+\r是回车，英文是Carriage return，作用：使光标到行首
+
+\n是换行，英文是New line/line feed，作用：使光标下移一行

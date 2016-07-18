@@ -48,10 +48,14 @@ public class StandardAgent {
 
     // manage MBean
     try {
+      Car car1 = new Car();
+      Car car2 = new Car();
       Attribute colorAttribute = new Attribute("Color","blue");
       mBeanServer.setAttribute(objectName, colorAttribute);
       System.out.println(mBeanServer.getAttribute(objectName, "Color"));
       mBeanServer.invoke(objectName,"drive",null,null);
+      Car car3 = new Car();
+      car1.drive();car2.drive();car3.drive();
     } 
     catch (Exception e) {
       e.printStackTrace();

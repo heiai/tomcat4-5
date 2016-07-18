@@ -61,7 +61,7 @@ public class HttpServer {
         response.sendStaticResource();
 
         // Close the socket
-        socket.close();
+  //      socket.close();
 
         //check if the previous URI is a shutdown command
         shutdown = request.getUri().equals(SHUTDOWN_COMMAND);

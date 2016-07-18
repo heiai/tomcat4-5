@@ -1,0 +1,35 @@
+2016-06-30 11:19:33 HttpConnector Opening server socket on all host IP addresses
+2016-06-30 11:19:55 HttpConnector[8080] Starting background thread
+2016-06-30 11:19:55 HttpProcessor[8080][0] Starting background thread
+2016-06-30 11:19:55 HttpProcessor[8080][1] Starting background thread
+2016-06-30 11:19:55 HttpProcessor[8080][2] Starting background thread
+2016-06-30 11:19:55 HttpProcessor[8080][3] Starting background thread
+2016-06-30 11:19:55 HttpProcessor[8080][4] Starting background thread
+2016-06-30 11:21:58 HttpConnector Opening server socket on all host IP addresses
+2016-06-30 11:21:58 HttpConnector httpConnector, io problem: 
+java.net.BindException: Address already in use: JVM_Bind:8080
+	at org.apache.catalina.connector.http.HttpConnector.open(HttpConnector.java:980)
+	at org.apache.catalina.connector.http.HttpConnector.initialize(HttpConnector.java:1187)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:579)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:2245)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:509)
+	at org.apache.catalina.startup.Catalina.execute(Catalina.java:400)
+	at org.apache.catalina.startup.Catalina.process(Catalina.java:180)
+	at org.apache.catalina.startup.Catalina.main(Catalina.java:165)
+
+2016-06-30 11:22:42 HttpConnector Opening server socket on all host IP addresses
+2016-06-30 11:27:42 HttpConnector Opening server socket on all host IP addresses
+2016-06-30 11:29:11 HttpConnector[8080] Starting background thread
+2016-06-30 11:29:11 HttpProcessor[8080][0] Starting background thread
+2016-06-30 11:29:11 HttpProcessor[8080][1] Starting background thread
+2016-06-30 11:29:11 HttpProcessor[8080][2] Starting background thread
+2016-06-30 11:29:11 HttpProcessor[8080][3] Starting background thread
+2016-06-30 11:29:11 HttpProcessor[8080][4] Starting background thread
+2016-06-30 11:43:22 HttpConnector Opening server socket on all host IP addresses
+2016-06-30 13:26:39 HttpConnector[8080] Starting background thread
+2016-06-30 13:26:39 HttpProcessor[8080][0] Starting background thread
+2016-06-30 13:26:39 HttpProcessor[8080][1] Starting background thread
+2016-06-30 13:26:39 HttpProcessor[8080][2] Starting background thread
+2016-06-30 13:26:39 HttpProcessor[8080][3] Starting background thread
+2016-06-30 13:26:39 HttpProcessor[8080][4] Starting background thread
+2016-06-30 16:20:26 HttpConnector Opening server socket on all host IP addresses

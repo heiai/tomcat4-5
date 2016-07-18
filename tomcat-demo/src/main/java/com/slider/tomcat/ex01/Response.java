@@ -39,16 +39,17 @@ public class Response {
           output.write(bytes, 0, ch);
           ch = fis.read(bytes, 0, BUFFER_SIZE);
         }
-      }
-      else {
+      }else {
         // file not found
         String errorMessage = "HTTP/1.1 404 File Not Found\r\n" +
           "Content-Type: text/html\r\n" +
           "Content-Length: 23\r\n" +
+          "Connection:close\r\n"+
           "\r\n" +
           "<h1>File Not Found</h1>";
         output.write(errorMessage.getBytes());
       }
+      output.flush();
     }
     catch (Exception e) {
       // thrown if cannot instantiate a File object
