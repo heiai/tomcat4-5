@@ -11,7 +11,11 @@
 	先调用HttpResponseBase。sendHeaders()方法将请求头写到流中
 	然后调用ResponseBase.finishResponse()方法，如同在servlet中手动关闭输出流
 	
-	
+
+
+客户端何时停止接收消息
+1.响应头指定了Content-Length,收到了指定大小的数据流
+2.服务器端调用socket.close()关闭了链接	
 	
 	
 	
