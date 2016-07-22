@@ -266,11 +266,23 @@
 
 
       </Host>
+      
+        <Logger className="org.apache.catalina.logger.FileLogger"
+              prefix="catalina_log." suffix=".txt"
+              timestamp="true"/>
+              
+      <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+                 debug="0" resourceName="UserDatabase"/>
+              
+      
 	
-	    <Host name="slider.com" debug="0" appBase="webapps" 
-       unpackWARs="true" autoDeploy="true">
+	    <Host name="slider.com" debug="0" appBase="webapps2" 
+     		  unpackWARs="true" autoDeploy="true">
        
         </Host>
+          <Logger className="org.apache.catalina.logger.FileLogger"
+                 directory="logs"  prefix="localhost_log." suffix=".txt"
+	      timestamp="true"/>
     </Engine>
 
   </Service>
