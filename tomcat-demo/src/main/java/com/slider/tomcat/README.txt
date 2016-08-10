@@ -5,7 +5,7 @@ Catalina:
 此时会创建engine,host容器,如果xml文件配置了<content>节点，也会创建content容器
 依次调用server的initialize,start,await,stop方法，其中await方法会创建一个serverSocket阻塞stop()方法的执行，等待SHUTDOWN命令。
 
-Server服务器器组件和Service服务器:
+Server服务器组件和Service服务组件:
 Server接口实例表示Catalina的整个servlet引擎，囊括了所有的组件。它使用一种优雅的方法启动/关闭整个系统，不需要再对连接器和容器分别启动。
 服务组件是Service接口的实例，一个服务主键可以有一个servlet容器和多个连接器实例.可以自由的把连接器实例添加到服务主键中，所有的连接器都会与这个servlet容器关联。
 
