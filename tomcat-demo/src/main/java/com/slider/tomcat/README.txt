@@ -25,7 +25,7 @@ Store session存储器
 FileStore;JdbcStore
 
 loader 类加载器
-WebappLoader :StrandardContext的属性在context调用start方法的时候初始化
+WebappLoader :StandardContext的属性在context调用start方法的时候初始化
 WebappLoader类的start()方法会创建类加载器（WebappClassLoader）并设置仓库地址WEB-INF/lib,WEB-INF/classes
 WebappLoader 会有一个线程去检查所加载的类是否有改变，如果有变化则会调用context的reload方法，reload方法会调用子容器和loader的stop()和start()方法，loader的stop和start方法会销毁当前的类加载器并创建新的类加载器
 
@@ -38,4 +38,9 @@ ContainerBase:容器抽象类实现Container, Lifecycle, Pipeline接口，包含
 引导类载入器(bootstrap class loader),扩展类载入器(extension class loader),系统类载入器(system class loader)
 
 
+构建自己的web应用程序管理整个tomcat中的应用程序(ManagerServlet)
+编写一个自己的servlet实现ContainerServlet接口，就可以获取到tomcat中的warpper容器。
+
+
+BasicAuthenticator UserDatabaseRealm
 
